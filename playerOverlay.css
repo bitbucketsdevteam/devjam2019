@@ -1,0 +1,49 @@
+.title {
+	font-size: 24pt;
+	width: 300px;
+	text-align: center;
+}
+.container {
+    height: 30px;
+    width: 100%;
+}
+.progressBase {
+    position: relative;
+    width: 300px;
+    background-color: #ddd;
+    height: 30px;
+    display:inline-block;
+	border-radius: 10px;
+}
+.progressFill {
+    width: 0;
+    height: 30px;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+	border-radius: 10px;
+}
+.counter { 
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.countBox {
+    position: absolute;
+    left: 310;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+	border-radius: 15px;
+}
+#p1Fill {
+    background-color: green;
+}
+#p2Fill {
+    background-color: red;
+}
+#p1Box{
+	background-color: green;
+}
+#p2Box{
+    background-color: red;
+}

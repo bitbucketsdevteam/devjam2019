@@ -1,0 +1,9 @@
+Part of the competition requirement is that we use AWS so I figure the best way to do that is to store persistent values in S3. The Twitch dev I spoke with said that Lambda can store persistent values, but from what I've seen that may not be accurate. I'll put in how I believe it needs to be connected together but I don't know the protocols and authorizations so if you have any questions or better ideas, let me know.
+
+General logic flow:
+
+Purchase is made -> on transaction confirmation, amount/SKU is pushed to storedVals.js -> overlay pages sync values from storedVals.js on a regular interval, or with an event listener -> in case of crash or error, values should not be affected, as long as storedVals.js remains intact
+
+Each product's SKU will simply be the number of bits it costs, so you can pass the SKU as "amount" to the persistent values in the same action as the "buy" function.
+
+The panel has six groups, each with two choices. In configuration, broadcasters will be able to hide entire groups and/or one of the individual buttons in a group. Each group corresponds to an overlay page to be used as a browser source. Each overlay page has its own js doc, so however you think those pages need to be grouped or referenced is up to you. Either way, all of those pages can be static as long as they all sync with the storedVals.js doc.

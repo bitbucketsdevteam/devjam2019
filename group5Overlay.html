@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="playerOverlay.css" type="text/css">
+<script src="storedVals.js"></script>
+<script src="group5Overlay.js"></script>
+
+<body>
+  <div class="title">Player 1 Boon & Bust</div>	
+	
+  <div class="container"> 
+    <div class="progressBase">
+      <div id="p1Fill" class="progressFill"></div>
+    </div>
+    <div id="p1Box" class="countBox">
+      <div id="p1Count" class ="counter">0</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="progressBase">
+      <div id="p2Fill" class="progressFill"></div>
+    </div>
+    <div id="p2Box" class="countBox">
+      <div id="p2Count" class ="counter">0</div>
+    </div>
+  </div>
+	
+<!--only for testing, to be removed and replaced by event trigger-->	
+  <br>
+  <button onclick="moveP1()">Demo "giveBits('g5p1',10)"</button> 
+  <button onclick="moveP2()">Demo "giveBits('g5p2',10)"</button> 
+	
+</body>
+</html>

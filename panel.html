@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<script src="viewer.js"></script>
+<script src="storedVals.js"></script>
+<title>Viewer Page</title>
+<link rel="stylesheet" href="viewer.css" type="text/css">
+</head>
+	
+<body>
+<!--put here by twitch, do not erase-->
+	<div id="app" class="full-height"></div>
+	<script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+	<script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+
+		
+<!--begin my code-->
+	<div class="title">Be the DM</div>
+	<div class="subTitle">Move the slider to choose how many bits to drop <br> then pick a bucket to drop them in.</div>
+	<input type="range" id="chooser" step="10" min="50" max="2500" value="50" oninput= "updateButtons()">
+	
+	<!--product area: each group represents a particular player in an RPG or a pair of related choices-->
+	<div style= "position:absolute; top:96px; width: 298px; height: 400px">
+		<div class="prodGroup" id="group1Box"> 
+			<!--one block of products; currently involves 2 products in each group; each group renders to a single overlay page; group name corresponds to page name, e.g. 'group1'->'group1Overlay.html'-->
+			<div class="prodGroupImgContainer" id="game1group1"></div> <!--img url assigned in css-->
+			<div class="description"> Gilbetta Fakinat<br>Boon to give inspiration<br>Bust to break weapon</div>
+			<button class="btn1" id="g1p1" onclick="giveBits('g1p1',chooser.value)">Boon<br><output id="g1p1Val">50</output></button>
+			<button class="btn2" id="g1p2" onclick="giveBits('g1p2',chooser.value)">Bust<br><output id="g1p2Val">50</output></button>
+		</div>
+		<div class="prodGroup" id="group2Box">
+			<div class="prodGroupImgContainer" id="game1group2"></div>
+			<div class="description"> Xyvelle Finefoot<br>Boon to give inspiration<br>Bust to break weapon</div>
+			<button class="btn1" id="g2p1" onclick="giveBits('g2p1',chooser.value)">Boon<br><output id="g2p1Val">50</output></button>
+			<button class="btn2" id="g2p2" onclick="giveBits('g2p2',chooser.value)">Bust<br><output id="g2p2Val">50</output></button>
+		</div>
+		<div class="prodGroup" id="group3Box">
+			<div class="prodGroupImgContainer" id="game1group3"></div>
+			<div class="description"> Koshano the Quick<br>Boon to give inspiration<br>Bust to break weapon</div>
+			<button class="btn1" id="g3p1" onclick="giveBits('g3p1',chooser.value)">Boon<br><output id="g3p1Val">50</output></button>
+			<button class="btn2" id="g3p2" onclick="giveBits('g3p2',chooser.value)">Bust<br><output id="g3p2Val">50</output></button>
+		</div>
+		<div class="prodGroup" id="group4Box">
+			<div class="prodGroupImgContainer" id="game1group4"></div>
+			<div class="description">Redann<br>Boon to give inspiration<br>Bust to break weapon</div>
+			<button class="btn1" id="g4p1" onclick="giveBits('g4p1',chooser.value)">Boon<br><output id="g4p1Val">50</output></button>
+			<button class="btn2" id="g4p2" onclick="giveBits('g4p2',chooser.value)">Bust<br><output id="g4p2Val">50</output></button>
+		</div>
+		<div class="prodGroup" id="group5Box">
+			<div class="prodGroupImgContainer" id="game1group5"></div>
+			<div class="description"> Lilith Singer<br>Boon to give inspiration<br>Bust to break weapon</div>
+			<button class="btn1" id="g5p1" onclick="giveBits('g5p1',chooser.value)">Boon<br><output id="g5p1Val">50</output></button>
+			<button class="btn2" id="g5p2" onclick="giveBits('g5p2',chooser.value)">Bust<br><output id="g5p2Val">50</output></button>
+		</div>	
+	</div>
+</body>
+</html>
